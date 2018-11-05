@@ -1,0 +1,7 @@
+<%= simple_form_for[@cocktail, @dose] do |f| %>
+  <%= f.input :description%>
+  <!-- input is for attributes of the table dose -->
+  <%= f.association  :ingredient, collection: Ingredient.all. %>
+  <!-- add attributes of other tables you use f.association -->
+  <%= f.submit %>
+<% end %>

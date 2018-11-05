@@ -7,9 +7,9 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.valid?
       @cocktail.save
-      redirect_to cocktail_path(@cocktail)
+      # redirect_to cocktail_path(@cocktail)
+      redirect_to new_cocktail_dose_path(@cocktail)
     else
-      # redirect_to new_cocktail_path
       render :new
     end
   end
