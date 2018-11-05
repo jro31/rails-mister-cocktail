@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   # Update
     # Edit
-    get 'cocktails/:id/edit', to: 'cocktails#edit'
+    get 'cocktails/:id/edit', to: 'cocktails#edit', as: 'edit_cocktail'
     # Update
     patch 'cocktails/:id', to: 'cocktails#update'
 

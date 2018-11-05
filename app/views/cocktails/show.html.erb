@@ -2,4 +2,6 @@
 
 <h2><%= @cocktail.name %></h2>
 
-<%= link_to 'Delete this cocktail', delete_cocktail_path, method: :delete %>
+<p><%= link_to 'Edit this cocktail', edit_cocktail_path %></p>
+<p><%= link_to 'Delete this cocktail', delete_cocktail_path, method: :delete %></p>
+<p><%= link_to 'Go back to cocktails', cocktails_path %></p>
