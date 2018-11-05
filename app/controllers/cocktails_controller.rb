@@ -4,14 +4,18 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    cocktail = Cocktail.new(cocktail_params)
-    cocktail.save
-    redirect_to cocktails_path
-    # redirect_to doses_path(@cocktail)
+    @cocktail = Cocktail.new(cocktail_params)
+    if @cocktail.valid?
+      @cocktail.save
+      redirect_to cocktail_path(@cocktail)
+    else
+      # redirect_to new_cocktail_path
+      render :new
+    end
   end
 
   def index
-    @cocktail = Cocktail.all
+    @cocktails = Cocktail.all
   end
 
   def show
