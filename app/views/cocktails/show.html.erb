@@ -4,7 +4,7 @@
 <p>Contains:</p>
 <ul>
 <% @cocktail.doses.each do |d| %>
-<li><%= d.ingredient.name %> (<%= d.description %>) <%= link_to 'Delete', cocktail_dose_path(d), method: :delete %></li>
+<li><%= d.ingredient.name %> (<%= d.description %>) <%= link_to 'Delete', dose_path(d), method: :delete %></li>
 <% end %>
 </ul>
 

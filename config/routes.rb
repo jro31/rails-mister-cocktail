@@ -33,6 +33,7 @@ Rails.application.routes.draw do
 #     delete 'cocktails/:id/doses/:id', to: 'doses#destroy'
 
 resources :cocktails do
-  resources :doses, only: [:new, :create, :destroy]
+  resources :doses, only: [:new, :create]
 end
+resources :doses, only: [:destroy]
 end
