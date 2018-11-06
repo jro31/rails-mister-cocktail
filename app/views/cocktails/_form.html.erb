@@ -1,7 +1,6 @@
-<%= form_for(@cocktail) do |f| %>
-  <%= f.label :name, "Name:" %>
-  <%= f.text_field :name, placeholder: "Sex on the beach" %>
-  <%= f.label :picture, "Picture URL:" %>
-  <%= f.text_field :picture, placeholder: "bomb" %>
+<% array = ['bomb', 'bullfrog', 'daiquiri', 'flaming_cocktail', 'gin', 'sidecar', 'southside', 'tropical_garden', 'voodoo_magic'] %>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name, label: 'Name:', placeholder: "Sex on the beach" %>
+  <%= f.input :picture, collection: array %>
   <%= f.submit %>
 <% end %>
