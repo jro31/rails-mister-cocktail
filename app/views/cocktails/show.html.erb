@@ -1,8 +1,7 @@
-<h1>This is the cocktails show page</h1>
-
-<h2><%= @cocktail.name %></h2>
-<p>Contains:</p>
-<ul>
+<h1 class="cocktail"><%= @cocktail.name.titleize %></h1>
+<%= image_tag @cocktail.picture %>
+<p>Ingredients:</p>
+<ul class="show">
 <% @cocktail.doses.each do |d| %>
 <li><%= d.ingredient.name %> (<%= d.description %>) <%= link_to 'Delete', dose_path(d), method: :delete %></li>
 <% end %>

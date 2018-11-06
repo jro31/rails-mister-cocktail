@@ -8,6 +8,7 @@
 
 puts "Emptying the database..."
 Ingredient.destroy_all
+Cocktail.destroy_all
 puts "Generating new ingredients..."
 
 20.times do |i|
@@ -18,7 +19,17 @@ puts "Generating new ingredients..."
   Ingredient.create(name: Faker::Food.spice)
 end
 
-puts "Finished generating ingredients..."
+puts "Finished generating ingredients"
+
+puts "Generating cocktails..."
+
+images_array = ['bomb', 'bullfrog', 'daiquiri', 'flaming_cocktail', 'gin', 'sidecar', 'southside', 'tropical_garden', 'voodoo_magic']
+
+30.times do |c|
+  Cocktail.create(name: Faker::Space.nebula, picture: images_array.sample)
+end
+
+puts "Finished generating cocktails"
 
 # puts "Emptying the DB"
 # Restaurant.destroy_all

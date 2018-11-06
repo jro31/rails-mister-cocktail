@@ -3,3 +3,21 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+@import url('https://fonts.googleapis.com/css?family=Creepster|Great+Vibes');
+
+body {
+  background-color: rgb(220, 220, 220);
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Creepster', cursive;
+  font-size: 100px;
+}
+
+h1.cocktail {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+}
