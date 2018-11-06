@@ -1,6 +1,6 @@
-<% array = ['bomb', 'bullfrog', 'daiquiri', 'flaming_cocktail', 'gin', 'sidecar', 'southside', 'tropical_garden', 'voodoo_magic'] %>
+<% array = ['https://res.cloudinary.com/dftybtoej/image/upload/v1541510093/bomb.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/gin.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/bullfrog.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/sidecar.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/tropical_garden.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/daiquiri.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/voodoo_magic.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/southside.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510129/flaming_cocktail.jpg'] %>
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name, label: 'Name:', placeholder: "Sex on the beach" %>
-  <%= f.input :picture, collection: array %>
+  <%= f.input :picture, collection: array, placeholder: "Select image" %>
   <%= f.submit %>
 <% end %>
