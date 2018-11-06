@@ -1,3 +1,13 @@
 ul.show {
   list-style-type: none;
+  border: black solid 1px;
+  width: 50vw;
+  margin: 10px auto 30px auto;
+  padding-bottom: 20px;
+  box-shadow: 2px 2px 2px black;
+}
+
+#cocktail_image {
+  width: 50vw;
+  box-shadow: 2px 2px 2px black;
 }

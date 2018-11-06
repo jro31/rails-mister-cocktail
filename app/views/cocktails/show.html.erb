@@ -1,7 +1,7 @@
 <h1 class="cocktail"><%= @cocktail.name.titleize %></h1>
-<%= image_tag @cocktail.picture %>
-<p>Ingredients:</p>
+<%= image_tag @cocktail.picture, id: 'cocktail_image' %>
 <ul class="show">
+<h4>Ingredients:</h4>
 <% @cocktail.doses.each do |d| %>
 <li><%= d.ingredient.name %> (<%= d.description %>) <%= link_to 'Delete', dose_path(d), method: :delete %></li>
 <% end %>
