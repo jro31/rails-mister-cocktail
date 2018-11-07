@@ -25,8 +25,14 @@ puts "Generating cocktails..."
 
 images_array = ['bomb', 'bullfrog', 'daiquiri', 'flaming_cocktail', 'gin', 'sidecar', 'southside', 'tropical_garden', 'voodoo_magic']
 
+
+
+array = ['https://res.cloudinary.com/dftybtoej/image/upload/v1541510093/bomb.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/gin.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/bullfrog.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/sidecar.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/tropical_garden.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/daiquiri.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/voodoo_magic.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/southside.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510129/flaming_cocktail.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541512491/rum_harvest.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541512491/strawberry_basil.jpg']
+
 30.times do |c|
-  Cocktail.create(name: Faker::Space.nebula, picture: images_array.sample)
+  c = Cocktail.new(name: Faker::Space.nebula)
+  c.remote_picture_url = array.sample
+  c.save
 end
 
 puts "Finished generating cocktails"
