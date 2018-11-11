@@ -8,6 +8,8 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.user = current_user
+    authorize @cocktail
     if @cocktail.valid?
       @cocktail.save
       redirect_to cocktail_path(@cocktail)
@@ -18,10 +20,12 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @cocktails = policy_scope(Cocktail)
   end
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    authorize @cocktail
   end
 
   def edit

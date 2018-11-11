@@ -21,11 +21,18 @@ end
 
 puts "Finished generating ingredients"
 
+# puts "Generating users..."
+
+# 20.times do |n|
+#   u = User.new(email: Faker::Internet.email, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+#   puts u.first_name
+#   u.save
+#   puts u.id
+# end
+
+# puts "Users generated"
+
 puts "Generating cocktails..."
-
-images_array = ['bomb', 'bullfrog', 'daiquiri', 'flaming_cocktail', 'gin', 'sidecar', 'southside', 'tropical_garden', 'voodoo_magic']
-
-
 
 array = ['https://res.cloudinary.com/dftybtoej/image/upload/v1541510093/bomb.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/gin.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/bullfrog.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/sidecar.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510094/tropical_garden.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/daiquiri.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/voodoo_magic.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510095/southside.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541510129/flaming_cocktail.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541512491/rum_harvest.jpg', 'https://res.cloudinary.com/dftybtoej/image/upload/v1541512491/strawberry_basil.jpg']
 
