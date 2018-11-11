@@ -3,6 +3,7 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+    authorize @cocktail
   end
 
   def create
