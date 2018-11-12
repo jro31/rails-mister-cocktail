@@ -30,10 +30,12 @@ class CocktailsController < ApplicationController
 
   def edit
     @cocktail = Cocktail.find(params[:id])
+    authorize @cocktail
   end
 
   def update
     @cocktail = Cocktail.find(params[:id])
+    authorize @cocktail
     @cocktail.update(cocktail_params)
     redirect_to cocktail_path(@cocktail)
   end

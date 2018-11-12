@@ -5,7 +5,9 @@
 <% @cocktail.doses.each do |d| %>
 <li><%= d.ingredient.name %> (<%= d.description %>) <%= link_to 'Delete', dose_path(d), method: :delete %></li>
 <% end %>
+<% if policy(Dose).create? %>
 <p style="margin-top: 15px"><%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %></p>
+<% end %>
 </ul>
 
 <p><%= link_to 'Edit this cocktail', edit_cocktail_path %></p>

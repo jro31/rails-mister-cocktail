@@ -1,4 +1,4 @@
-class CocktailPolicy < ApplicationPolicy
+class DosePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -9,11 +9,7 @@ class CocktailPolicy < ApplicationPolicy
     true
   end
 
-  def show?
-    true
-  end
-
-  def update?
+  def destroy?
     is_owner_or_admin?
   end
 
